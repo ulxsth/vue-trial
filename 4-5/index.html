@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>4-5</title>
+</head>
+<body>
+    <form action="POST">
+        <p>名前</p>
+        <input v-model="name" type="text">
+        <p v-if="!isInValidName" class="error">名前は4文字以上で入力してください</p>
+
+        <p>電話番号</p>
+        <input v-model="phone" type="number">
+        <p v-if="!isInValidPhone" class="error">電話番号は数字8文字以上で入力してください</p>
+
+        <p>メールアドレス</p>
+        <input v-model="email" type="text">
+        <p v-if="!isInValidEmail" class="error">Eメールアドレスの形式で入力してください</p>
+    </form>
+</body>
+</html>
